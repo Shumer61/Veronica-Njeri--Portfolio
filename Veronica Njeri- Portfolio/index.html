@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chef Ana</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+/>
+
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="navbar">
+    <h1>Chef VERO</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#menu">Menu</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- About Section -->
+  <section class="about-card" id="about">
+    <h2>About Me</h2>
+    <p>I have a deep passion for bringing positive food experiences to customers through enjoyable and healthy meals that leave lasting impressions. Prepares meals according to recipes, makes adjustments according to customer requests.</p>
+  </section>
+
+  <!-- Slideshow Gallery Placeholder -->
+  <section class="slideshow" id="gallery">
+    <div class="slideshow-container">
+    <img src="images/image1.jpg" class="slide active" alt="Dish 1">
+    <img src="images/image2.jpg" class="slide" alt="Dish 2">
+    <img src="images/image3.jpg" class="slide" alt="Dish 3">
+    <img src="images/image4.jpg" class="slide" alt="Dish 4">
+    <img src="images/image5.jpg" class="slide" alt="Dish 5">
+    <img src="images/image6.jpg" class="slide" alt="Dish 5">
+    <img src="images/image7.jpg" class="slide" alt="Dish 5">
+    <img src="images/image8.jpg" class="slide" alt="Dish 5">
+    <img src="images/image9.jpg" class="slide" alt="Dish 5">
+    <img src="images/image10.jpg" class="slide" alt="Dish 5">
+    <img src="images/image11.jpg" class="slide" alt="Dish 5">
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
+  </div>
+
+  </section>
+  
+  <!-- Menu Dropdown Section -->
+  <section id="menu">
+    <h2 id="menu-title">Chef Vero's Signature Menu</h2>
+
+
+  
+    <!-- Kenyan Cuisine -->
+    <details>
+      <summary>🇰🇪 Kenyan Culinary Heritage</summary>
+      <ul>
+        <li>🔥 Nyama Choma Platter – Char-grilled meat with kachumbari & ugali</li>
+        <li>🐟 Tilapia in Coconut Sauce – Whole fried tilapia in creamy gravy</li>
+        <li>🥔 Mukimo Delight – Mashed peas, maize & potatoes with beef stew</li>
+        <li>🌭 Irio and Grilled Sausage – Kikuyu-style mash & beef sausage</li>
+        <li>🍌 Matoke & Peanut Stew – Green bananas in rich peanut sauce</li>
+      </ul>
+    </details>
+  
+    <!-- Pan-African Cuisine -->
+    <details>
+      <summary>🌍 Pan-African Favorites</summary>
+      <ul>
+        <li>🍚 Jollof Rice – West African spicy rice with grilled chicken & plantains</li>
+        <li>🍛 Bunny Chow – South African bread bowl filled with curry</li>
+        <li>🥣 Egusi with Fufu – Nigerian melon seed stew with assorted meat</li>
+      </ul>
+    </details>
+  
+    <!-- European Dishes -->
+    <details>
+      <summary>🇪🇺 European Inspirations</summary>
+      <ul>
+        <li>🍄 Creamy Mushroom Risotto – Arborio rice with garlic & parmesan</li>
+        <li>🍷 Coq au Vin – Braised chicken in red wine & herbs</li>
+        <li>🧀 Spinach Ricotta Cannelloni – Stuffed pasta with marinara sauce</li>
+        <li>🐟 Herb-Crusted Salmon – Served with mash and grilled asparagus</li>
+      </ul>
+    </details>
+  
+    <!-- Healthy Picks -->
+    <details>
+      <summary>🌿 Health-Conscious Choices</summary>
+      <ul>
+        <li>🥗 Quinoa Avocado Bowl – Fresh, balanced & vibrant</li>
+        <li>🥦 Grilled Vegetable Couscous – Colorful veggies over couscous</li>
+        <li>🍓 Chia Pudding with Berries – Light, sweet and nourishing</li>
+      </ul>
+    </details>
+  
+    <!-- Desserts and Drinks -->
+    <details>
+      <summary>🍰 Desserts & Refreshments</summary>
+      <ul>
+        <li>☕ Mandazi Bites with Chai Masala</li>
+        <li>🍰 Passion Fruit Cheesecake</li>
+        <li>🍧 Fresh Mango Sorbet</li>
+        <li>🧃 Hibiscus & Ginger Iced Tea</li>
+        <li>🍯 Classic Dawa (honey-lemon-ginger)</li>
+      </ul>
+    </details>
+  </section>
+  
+  <!-- Footer Contact Section -->
+  <footer id="contact">
+    <p>📞 07224211512 | 📧 <a href="mailto:njerichins@gmail.com">njerichins@gmail.com</a></p>
+    <p>
+        <a href="https://www.instagram.com/yourprofile" target="_blank">
+          <i class="fab fa-instagram"></i> Instagram
+        </a> |
+        <a href="https://www.facebook.com/yourprofile" target="_blank">
+          <i class="fab fa-facebook"></i> Facebook
+        </a> |
+        <a href="https://www.youtube.com/yourchannel" target="_blank">
+          <i class="fab fa-youtube"></i> YouTube
+        </a>
+      </p>
+      
+  </footer>
+
+  <!-- Slideshow JS -->
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll(".slide");
+    const totalSlides = slides.length;
+  
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle("active", i === index);
+      });
+    }
+  
+    document.querySelector(".prev").addEventListener("click", () => {
+      currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+      showSlide(currentSlide);
+    });
+  
+    document.querySelector(".next").addEventListener("click", () => {
+      currentSlide = (currentSlide + 1) % totalSlides;
+      showSlide(currentSlide);
+    });
+  
+    setInterval(() => {
+      currentSlide = (currentSlide + 1) % totalSlides;
+      showSlide(currentSlide);
+    }, 5000);
+  </script>
+  
+  <script>
+    const backToTopBtn = document.getElementById("backToTop");
+  
+    // Show button when scrolling down
+    window.onscroll = () => {
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        backToTopBtn.style.display = "block";
+      } else {
+        backToTopBtn.style.display = "none";
+      }
+    };
+  
+    // Scroll to top when clicked
+    backToTopBtn.onclick = () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+  </script>
+  <button class="back-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
+    ↑
+  </button>
+  
+</body>
+</html>

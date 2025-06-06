@@ -1,0 +1,220 @@
+/* Base Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #FFF8F0; /* Light cream background */
+    color: #333333; /* Deep readable text */
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
+  }
+  
+  /* Header */
+  header.navbar {
+    background-color: #F4A261;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  header.navbar h1 {
+    font-size: 2rem;
+    color: white;
+  }
+  
+  header.navbar nav a {
+    margin-left: 1.5rem;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  header.navbar nav a:hover {
+    color: #264653;
+  }
+  
+  /* About Section */
+  .about-card {
+    background-color: white;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 800px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .about-card h2 {
+    color: #E76F51;
+    margin-bottom: 1rem;
+  }
+  
+  /* Slideshow Container */
+.slideshow {
+    max-width: 600px;
+    margin: 3rem auto;
+  }
+  
+  .slideshow-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Forces a perfect square */
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    background: #fff;
+  }
+  
+  /* Slideshow Images */
+  .slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .slide.active {
+    display: block;
+  }
+  
+  /* Navigation Buttons */
+  .prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.4);
+    color: white;
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border: none;
+    z-index: 10;
+    transition: background 0.3s ease;
+  }
+  
+  .prev:hover, .next:hover {
+    background: rgba(0,0,0,0.7);
+  }
+  
+  .prev {
+    left: 10px;
+  }
+  
+  .next {
+    right: 10px;
+  }
+  
+  
+  /* Menu Section */
+  #menu {
+    max-width: 800px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  #menu h2 {
+    text-align: center;
+    color: #E76F51;
+    margin-bottom: 1rem;
+  }
+  #menu-title {
+    user-select: none;
+    pointer-events: none;
+  }
+  
+  
+  details {
+    background-color: #FAF9F6;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  summary {
+    font-weight: bold;
+    color: #264653;
+  }
+  
+  details[open] summary {
+    color: #E76F51;
+  }
+  
+  details ul {
+    padding-left: 1rem;
+    margin-top: 0.5rem;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #264653;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+  }
+  
+  footer a {
+    color: #E9C46A;
+    text-decoration: none;
+    margin: 0 0.5rem;
+  }
+  
+  footer a:hover {
+    color: #F4A261;
+  }
+  
+  /* Back to Top Button */
+  .back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background-color: #E76F51;
+    color: white;
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .back-to-top:hover {
+    background-color: #D35400;
+  }
+  
+  /* Typography Enhancements */
+  h2, h3 {
+    color: #E76F51;
+    font-weight: 600;
+  }
+  
+  /* Disable text selection for interactive UI parts */
+summary,
+li,
+.navbar h1,
+.navbar nav a,
+.about-card,
+#menu details,
+footer,
+button,
+a {
+  user-select: none;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;     /* IE/Edge */
+}
